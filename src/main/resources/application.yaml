@@ -1,0 +1,16 @@
+logging:
+  level:
+    io.lettuce.core: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  redis:
+    # 配置redis哨兵
+    sentinel:
+      # 主节点名称
+      master: mymaster
+      # 哨兵节点地址
+      nodes:
+        - 10.190.67.128:27001
+        - 10.190.67.128:27002
+        - 10.190.67.128:27003
